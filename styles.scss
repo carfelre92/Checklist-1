@@ -1,0 +1,39 @@
+$main-font: 'Raleway', sans-serif;
+
+*{
+    margin:0;
+    font-family: $main-font;
+}
+
+.wrap{
+    //border:thin red solid;
+}
+
+.section1{
+
+    .container{
+
+        .heading{
+            margin-top:2.5rem;
+            h1{
+                font-size:2rem;
+                font-weight: 800;
+            }
+        }
+
+        .todo-list{
+
+            // .col-sm-12{
+            //     border:green solid thin;
+            // }
+            .col-lg-6{
+                border:magenta solid thin;
+            }
+        }
+    }
+}
+
+
+
+
+

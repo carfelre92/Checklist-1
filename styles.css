@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.section1 .container .heading {
+  margin-top: 2.5rem;
+}
+
+.section1 .container .heading h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.section1 .container .todo-list .col-lg-6 {
+  border: magenta solid thin;
+}
+/*# sourceMappingURL=styles.css.map */
