@@ -8,6 +8,19 @@
 .wrap {
   background-color: #c7eafe;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 .section1 .container-lg {
@@ -111,5 +124,65 @@
 
 .section1 .container-todo-list {
   margin: 0rem;
+}
+
+.section2 {
+  margin-bottom: 1rem;
+}
+
+.section2 .form-note .row .note-container {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: white;
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.section2 .form-note .row .note-container .heading-title {
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+}
+
+.section2 .form-note .row .note-container .input-title {
+  font-size: 1.15rem;
+  border: none;
+  padding: 0.25rem 1rem;
+}
+
+.section2 .form-note .row .note-container .line-container {
+  padding: 0 1rem;
+}
+
+.section2 .form-note .row .note-container .line-container .line {
+  width: 100%;
+  border-bottom: #B9B9B9 solid thin;
+}
+
+.section2 .form-note .row .note-container .input-type {
+  font-size: 1.15rem;
+  border: none;
+  padding: 0.25rem 1rem;
+}
+
+.section2 .form-note .row .note-container .button-container {
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section2 .form-note .row .note-container .button-container .button {
+  border: none;
+  background-color: #5172E3;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  width: 49%;
+  text-align: center;
+  padding: 0.08rem 0;
 }
 /*# sourceMappingURL=styles.css.map */

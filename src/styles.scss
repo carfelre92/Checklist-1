@@ -3,6 +3,7 @@
 
 $main-font: "Raleway", sans-serif;
 $main-color: #c7eafe;
+$second-color:#5172E3;
 $main-font-color: #324ca8;
 $second-font-color: #5b5b5b;
 $third-font-color: black;
@@ -17,9 +18,12 @@ $third-font-color: black;
 .wrap {
     background-color: $main-color;
     min-height: 100vh;
+    display: flex;
+    flex-direction:column;
 }
 
 .section1 {
+    flex: 1 0 auto;
     .container-lg {
         margin: 0 1rem;
 
@@ -114,5 +118,76 @@ $third-font-color: black;
 
     .container-todo-list {
         margin: 0rem;
+    }
+}
+
+.section2 {
+    // position: absolute;
+    // width:100%;
+    // bottom:0;
+    // margin-bottom: 1rem;
+    margin-bottom:1rem;
+    .form-note{
+        .row{
+            .note-container{
+                position: relative;
+                border-radius: 0.5rem;
+                background-color: white;
+                width:100%;
+                margin:0 1rem;
+
+                .heading-title{
+                    font-size:1.5rem;
+                    padding:0.25rem 1rem;
+                }
+
+                .input-title{
+                    font-size: 1.15rem;
+                    border:none;
+                    padding:0.25rem 1rem;
+                }
+
+                .line-container{
+                    padding:0 1rem;
+                    .line {
+                        width:100%;
+                        border-bottom: #B9B9B9 solid thin;
+                    }
+                }
+
+
+                .input-type{
+                    font-size: 1.15rem;
+                    border:none;
+                    padding:0.25rem 1rem;
+                }
+
+
+
+
+
+
+
+                .button-container{
+                    padding:0.5rem;
+                    display: flex;
+                    justify-content: space-between;
+                    .button{
+                        border: none;
+                        background-color: $second-color;
+                        font-size:1.5rem;
+                        color: white;
+                        text-transform: uppercase;
+                        border-radius: 0.5rem;
+                        width:49%;
+                        text-align: center;
+                        //border: red solid thin;
+                        padding:0.08rem 0;
+                    }
+                }
+            }
+            
+            
+        }
     }
 }
