@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles.css';
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStar as fasStar } from "@fortawesome/free-solid-svg-icons"
+import { faStar as farStar} from "@fortawesome/free-regular-svg-icons"
+
+library.add(farStar,fasStar)
+
+const Circle = ({ filled, onClick }) => {
+
+  return (
+    <div onClick={onClick} >
+      <FontAwesomeIcon icon={filled ? farStar : fasStar}/>
+    </div>
+  );
+};
+
+
 class App extends Component {
 
   constructor(props) {
@@ -11,7 +25,11 @@ class App extends Component {
 
     this.state = {
       notes: [
-
+        {
+          id: 1,
+          titleInput: 'title input',
+          typeInput: 'typeinput',
+        }
       ],
       titleInput: '',
       typeInput: '',
@@ -36,6 +54,7 @@ class App extends Component {
         id: Date.now(),
         titleInput:this.state.titleInput,
         typeInput:this.state.typeInput,
+        
       }
   
       let newNotes=[note,...this.state.notes]
@@ -63,7 +82,15 @@ class App extends Component {
     this.setState({notes:filteredNotes})
   }
 
+  handleStarClick = (e)=>{
+    console.log(e.target)
+  }
 
+  state = { filled: false };
+
+  handleClick = () => {
+    this.setState({ filled: !this.state.filled });
+  };
 
     render() {
       return (
@@ -92,7 +119,8 @@ class App extends Component {
                           <div className="todo-star">
                             <div className="star-five">
                               <i className="fas fa-star"></i>
-                              <FontAwesomeIcon icon={faStar} />
+                              {/* <FontAwesomeIcon icon={filled ? farStar : fasStar} onClick={this.handleClick}/> */}
+                              <Circle filled={this.state.filled} onClick={this.handleClick} />
                             </div>
                           </div>
                         </div>
